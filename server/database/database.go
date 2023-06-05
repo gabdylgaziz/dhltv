@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"gorm.io/gorm"
 	"gorm.io/driver/postgres"
-	"dcs/player"
+	"dcs/models"
 )
 
 func Connect() *gorm.DB{
@@ -14,7 +14,7 @@ func Connect() *gorm.DB{
 		panic("failed to connect database")
 	}
 	fmt.Println("Connected to DB")
-	db.AutoMigrate(&player.Player{})
+	db.AutoMigrate(&models.Player{})
 	return db
 }
 
