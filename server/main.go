@@ -2,10 +2,10 @@ package main
 
 import (
 	"dcs/handlers"
-	"dcs/player"
+	"dcs/models"
 )
 
-var players []player.Player
+var players []models.Player
 
 func main() {
 	handlers.HandleRequests()
